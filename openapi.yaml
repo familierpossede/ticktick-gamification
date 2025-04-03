@@ -1,0 +1,68 @@
+
+openapi: 3.0.0
+info:
+  title: TickTick Gamification Plugin (Read-Only)
+  version: 1.0.0
+  description: Read-only access to TickTick tasks for gamified habit tracking
+servers:
+  - url: https://yourdomain.com/api
+paths:
+  /tasks/today:
+    get:
+      summary: Get today’s tasks
+      operationId: getTodayTasks
+      tags:
+        - Tasks
+      responses:
+        '200':
+          description: A list of today’s tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+  /tasks/habits:
+    get:
+      summary: Get all recurring (habit) tasks
+      operationId: getHabitTasks
+      tags:
+        - Tasks
+      responses:
+        '200':
+          description: A list of recurring tasks (habits)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        dueDate:
+          type: string
+          format: date-time
+        isCompleted:
+          type: boolean
+        project:
+          type: string
+        recurring:
+          type: boolean
+  securitySchemes:
+    TickTickOAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ticktick.com/oauth/authorize
+          tokenUrl: https://ticktick.com/oauth/token
+          scopes:
+            tasks:read: Read user tasks
+security:
+  - TickTickOAuth: [tasks:read]
