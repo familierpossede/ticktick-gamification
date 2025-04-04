@@ -1,4 +1,3 @@
-
 {
   "schema_version": "v1",
   "name_for_human": "TickTick Gamification",
@@ -10,15 +9,15 @@
     "client_url": "https://ticktick.com/oauth/authorize",
     "authorization_url": "https://ticktick.com/oauth/authorize",
     "token_url": "https://ticktick.com/oauth/token",
-    "redirect_uri": "https://yourdomain.com/api/oauth/callback",
+    "redirect_uri": "https://ticktick-gamification.onrender.com/api/oauth/callback",
     "scope": "tasks:read"
   },
   "api": {
     "type": "openapi",
-    "url": "https://yourdomain.com/openapi.yaml",
+    "url": "https://ticktick-gamification.onrender.com/openapi.yaml",
     "is_user_authenticated": true
   },
-  "logo_url": "https://yourdomain.com/icon.png",
-  "contact_email": "you@yourdomain.com",
-  "legal_info_url": "https://yourdomain.com/legal"
+  "logo_url": "https://ticktick-gamification.onrender.com/icon.png",
+  "contact_email": "you@ticktickgamification.dev",
+  "legal_info_url": "https://ticktick-gamification.onrender.com/legal"
 }
