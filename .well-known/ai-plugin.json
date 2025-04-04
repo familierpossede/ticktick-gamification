@@ -2,13 +2,13 @@
   "schema_version": "v1",
   "name_for_human": "TickTick Gamification",
   "name_for_model": "ticktick_gamification",
-  "description_for_human": "Connect your TickTick account to gamify your habits with XP, coins, and streaks.",
-  "description_for_model": "Uses TickTick's API to fetch today's tasks and recurring habit tasks for read-only gamification tracking.",
+  "description_for_human": "Gamify your habits with XP, coins, and streaks.",
+  "description_for_model": "Uses TickTick's API to fetch today's tasks and recurring tasks.",
   "auth": {
     "type": "oauth",
-    "client_url": "https://ticktick.com/oauth/authorize",
-    "authorization_url": "https://ticktick.com/oauth/authorize",
-    "token_url": "https://ticktick.com/oauth/token",
+    "client_url": "https://ticktick-gamification.onrender.com/oauth/authorize",
+    "authorization_url": "https://ticktick-gamification.onrender.com/oauth/authorize",
+    "token_url": "https://ticktick-gamification.onrender.com/oauth/token",
     "redirect_uri": "https://ticktick-gamification.onrender.com/api/oauth/callback",
     "scope": "tasks:read"
   },
