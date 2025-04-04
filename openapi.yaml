@@ -3,8 +3,11 @@ info:
   title: TickTick Gamification Plugin (Read-Only)
   version: 1.0.0
   description: Read-only access to TickTick tasks for gamified habit tracking
+
 servers:
   - url: https://ticktick-gamification.onrender.com
+    description: Production server
+
 paths:
   /tasks/today:
     get:
@@ -21,6 +24,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Task'
+
   /tasks/habits:
     get:
       summary: Get all recurring (habit) tasks
@@ -36,6 +40,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Task'
+
 components:
   schemas:
     Task:
@@ -54,6 +59,7 @@ components:
           type: string
         recurring:
           type: boolean
+
   securitySchemes:
     TickTickOAuth:
       type: oauth2
@@ -63,5 +69,6 @@ components:
           tokenUrl: https://ticktick.com/oauth/token
           scopes:
             tasks:read: Read user tasks
+
 security:
   - TickTickOAuth: [tasks:read]
