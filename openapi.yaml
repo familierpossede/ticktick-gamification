@@ -5,7 +5,7 @@ info:
   version: 1.0.0
   description: Read-only access to TickTick tasks for gamified habit tracking
 servers:
-  - url: https://yourdomain.com/api
+  - url: https://ticktick-gamification.onrender.com
 paths:
   /tasks/today:
     get:
