@@ -1,11 +1,10 @@
-
 openapi: 3.0.0
 info:
   title: TickTick Gamification Plugin (Read-Only)
   version: 1.0.0
   description: Read-only access to TickTick tasks for gamified habit tracking
 servers:
-  - url: https://ticktick-gamification.onrender.com/
+  - url: https://ticktick-gamification.onrender.com
 paths:
   /tasks/today:
     get:
