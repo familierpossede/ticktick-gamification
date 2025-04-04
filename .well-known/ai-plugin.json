@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "TickTick Gamification",
   "name_for_model": "ticktick_gamification",
-  "description_for_human": "Gamify your habits with XP, coins, and streaks.",
-  "description_for_model": "Uses TickTick's API to fetch today's tasks and recurring tasks.",
+  "description_for_human": "Gamify your TickTick tasks with XP, coins, and streaks.",
+  "description_for_model": "Uses TickTick's API to fetch tasks and track recurring habits for gamification.",
   "auth": {
     "type": "oauth",
     "client_url": "https://ticktick-gamification.onrender.com/oauth/authorize",
